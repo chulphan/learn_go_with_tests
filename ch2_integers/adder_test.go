@@ -1,4 +1,4 @@
-package ch2_integers
+package integers
 
 import "testing"
 
