@@ -6,7 +6,7 @@ import (
 
 func TestRepeat(t *testing.T) {
 	t.Run("repeat 5 times a if given empty string", func(t *testing.T) {
-		repeated := Repeat("")
+		repeated := Repeat("", 5)
 		expected := "aaaaa"
 
 		if repeated != expected {
@@ -15,7 +15,7 @@ func TestRepeat(t *testing.T) {
 	})
 
 	t.Run("repeat 5 times given string", func(t *testing.T) {
-		repeated := Repeat("c")
+		repeated := Repeat("c", 5)
 		expected := "ccccc"
 
 		if repeated != expected {
@@ -35,6 +35,6 @@ func TestRepeat(t *testing.T) {
 
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Repeat("a")
+		Repeat("a", b.N)
 	}
 }
