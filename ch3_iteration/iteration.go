@@ -1,7 +1,7 @@
 package iteration
 
 func Repeat(char string) string {
-	repeated := ""
+	var repeated string
 
 	if char == "" {
 		char = "a"
