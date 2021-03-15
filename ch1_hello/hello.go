@@ -19,6 +19,10 @@ func Hello(name string, language string) string {
 		return spanishHelloPrefix + name + "!"
 	}
 
+	if language == "Korean" {
+		return "안녕, " + name + "!"
+	}
+
 	return englishHelloPrefix + name + "!"
 }
 
