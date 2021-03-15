@@ -7,8 +7,10 @@ import "fmt"
 	fmt.Println 이 side-effect 이고 우리가 전달하는 문자열은 우리의 도메인이다
 */
 
+const englishHelloPrefix = "Hello, "
+
 func Hello(name string) string {
-	return "Hello, " + name + "!"
+	return englishHelloPrefix + name + "!"
 }
 
 func main() {
