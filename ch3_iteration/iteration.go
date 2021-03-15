@@ -1,10 +1,14 @@
 package iteration
 
-func Repeat() string {
+func Repeat(char string) string {
 	repeated := ""
 
+	if char == "" {
+		char = "a"
+	}
+
 	for i := 0; i < 5; i++ {
-		repeated += "a"
+		repeated += char
 	}
 
 	return repeated
