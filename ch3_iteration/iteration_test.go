@@ -22,6 +22,15 @@ func TestRepeat(t *testing.T) {
 			t.Errorf("got %q but expect %q", repeated, expected)
 		}
 	})
+
+	t.Run("반복횟수를 인자로 전달하여 전달된 인자만큼 문자열을 반복하도록", func(t *testing.T) {
+		repeated := Repeat("c", 10)
+		expected := "cccccccccc"
+
+		if repeated != expected {
+			t.Errorf("got %q but expect %q", repeated, expected)
+		}
+	})
 }
 
 func BenchmarkRepeat(b *testing.B) {
