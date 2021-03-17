@@ -1,6 +1,8 @@
 package pointers_and_errors
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestWallet(t *testing.T) {
 	wallet := Wallet{}
@@ -8,6 +10,7 @@ func TestWallet(t *testing.T) {
 	wallet.Deposit(10)
 
 	got := wallet.Balance()
+
 	want := 10
 
 	if got != want {
