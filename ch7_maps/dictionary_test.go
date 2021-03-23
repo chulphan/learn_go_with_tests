@@ -2,7 +2,7 @@ package maps
 
 import "testing"
 
-func testAdd(t *testing.T) {
+func TestAdd(t *testing.T) {
 	t.Run("new word", func(t *testing.T) {
 		dictionary := Dictionary{}
 
@@ -11,7 +11,7 @@ func testAdd(t *testing.T) {
 
 		err := dictionary.Add(word, definition)
 
-		assertError(err, nil)
+		assertError(t, err, nil)
 		assertDefinition(t, dictionary, word, definition)
 	})
 
